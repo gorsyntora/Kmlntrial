@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/adduser" method=POST>
+    <input type="text" name="name">
+    <input type="text" name="email">
+    <input type="password" name="password">
+    <input id='current_date_time' name='date' type='text'>
+    <input type='submit' value='Submit'>
+</form>
+<script type="text/javascript">
+       document.getElementById('current_date_time').value = new Date();
+    </script>
+<form action="/edit" method=POST>
+    <input type="text" name="quoteId">
+    <input type="text" name="content">
+    <input type='submit' value='Submit'>
+</form>
+</body>
+</html>
