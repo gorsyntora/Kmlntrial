@@ -1,4 +1,4 @@
-package com.app.kamelntrial;
+package com.app.repo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,11 +21,14 @@ import java.util.Set;
 
 public class User {
     @Id
+    @NotNull
     @Column(name = "name", unique = true)
     private String name;
     @Column
+    @Email
     private String email;
     @Column
+    @NotNull
     private String password;
     @Column
     private Date date;

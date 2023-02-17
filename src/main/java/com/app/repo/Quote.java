@@ -1,4 +1,4 @@
-package com.app.kamelntrial;
+package com.app.repo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +18,7 @@ public class Quote {
 
     @Id
     @Column(name = "id", unique = true)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     int id;
 
    //  @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -25,11 +26,11 @@ public class Quote {
    // User user;
 
     @Column(name = "user_name")
-    String userName;
+    private String userName;
 
     @Column(name = "text")
-    String text;
+    private String text;
     @Column(name = "vote")
-    Integer vote;
+    private Integer vote;
 
 }
